@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg:             #f2efe8;
+  --color-bg-surface:     #ffffff;
+  --color-bg-muted:       #e8e4da;
+  --color-text:           #0e0d0b;
+  --color-text-secondary: #6b6862;
+  --color-text-muted:     #9a9690;
+  --color-border:         #d0cdc4;
+  --color-accent:         #4a3570;
+  --color-accent-hover:   #3a2860;
+  --color-success:        #16a34a;
+  --color-warning:        #d97706;
+  --color-error:          #dc2626;
+  --color-info:           #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:             #0e0d0b;
+    --color-bg-surface:     #1a1917;
+    --color-bg-muted:       #2a2925;
+    --color-text:           #f2efe8;
+    --color-text-secondary: #a09c94;
+    --color-text-muted:     #6a6660;
+    --color-border:         #2a2925;
+    --color-accent:         #a07be0;
+    --color-accent-hover:   #b48ee8;
+    --color-success:        #4ade80;
+    --color-warning:        #fbbf24;
+    --color-error:          #f87171;
+    --color-info:           #60a5fa;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  img:not([src*=".svg"]) {
+    filter: brightness(0.9);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'DM Mono', 'Courier New', monospace;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.3;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
